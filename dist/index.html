@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas Boilerplate | Chris Courses</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .jumps{
+      position: absolute;
+      top: 20%;
+      right: 63.5%;
+      font-size: 20px;
+      color: white;
+      padding: 10px 15px;
+      background-color: rgb(69, 117, 20);
+      border-radius: 30%;
+      
+    }
+
+    #openModalBtn{
+      position: absolute;
+      top: 20%;
+      right: 72.5%;
+      font-size: 20px;
+      color: white;
+      padding: 10px 15px;
+      background-color: rgb(95, 81, 56);
+      cursor: pointer;
+      border: 5px solid rgb(241, 239, 235);
+    }
+
+    .video{
+      position: absolute;
+      top: 28%;
+      right: 16.5%;
+      font-size: 20px;
+      color: white;
+      padding: 10px 15px;
+      background-color: rgb(69, 117, 20);
+      border-radius: 30%;
+
+      a{
+        text-decoration: none;
+        color: white;
+      }
+
+    }
+
+    .theorm{
+      position: absolute;
+      top: 20%;
+      right: 16.5%;
+      font-size: 20px;
+      color: white;
+      padding: 10px 15px;
+      background-color: rgb(69, 117, 20);
+      border-radius: 30%;
+      text-decoration: none;
+
+      a{
+        text-decoration: none;
+        color: white;
+      }
+
+    }
+
+  </style>
+<link rel="icon" href="favicon.ico"></head>
+
+<body>
+  <button id="openModalBtn">Get Jumps</button>
+
+  <div id="quizModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="question">Question</h2>
+      <div id="options">
+        <input type="radio" name="option" id="option1">
+        <label for="option1" id="label1">Option 1</label><br>
+        <input type="radio" name="option" id="option2">
+        <label for="option2" id="label2">Option 2</label><br>
+        <input type="radio" name="option" id="option3">
+        <label for="option3" id="label3">Option 3</label><br>
+        <input type="radio" name="option" id="option4">
+        <label for="option4" id="label4">Option 4</label><br>
+      </div>
+      <button id="checkAnswerBtn">Check Answer</button>
+      <p id="result"></p>
+    </div>
+  </div>
+  <div id="youWonModel" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>You Won!!</h2>
+    </div>
+  </div>
+  <canvas></canvas>
+  <div class="jumps"> 
+    <span>Jumps</span>
+    <span id="jumps">23</span>
+  </div>
+
+  <div class="video"> 
+    <a href="https://www.youtube.com/watch?v=WqhlG3Vakw8" target="_blank">
+      <span>Video Tutorial</span>
+    </a>
+  </div>
+
+  <div class="theorm"> 
+    <a href="https://byjus.com/maths/pythagoras-theorem/" target="_blank">
+      <span>Pythagorean Theorem</span>
+    </a>
+  </div>
+<script src="./js/canvas.bundle.js"></script></body>
+
+</html>
